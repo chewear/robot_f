@@ -14,6 +14,17 @@ class CustomLibrary:
 
         return users
 
+    def get_last_5_users(self):
+        response = requests.get('https://jsonplaceholder.typicode.com/users', verify=False)
+        users = response.json()[5:]
+
+        for user in users:
+            user['birthday'] = self.get_random_birthday()
+            user['password'] = self.generate_password()
+            user['state'] = str(user['address']['street'])+str(user['address']['suite'])+str(user['address']['city'])
+
+        return users
+
     def get_random_birthday(self):
         return str(random.randint(1, 12)).zfill(2) + str(random.randint(1, 28)).zfill(2) + str(random.randint(1980, 2006))
 

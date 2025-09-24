@@ -1,6 +1,7 @@
 *** Settings ***
 Variables    ../Variables/customerpage.py
 Library     ../Library/CustomLibrary.py
+Library     String
 
 *** Keywords ***
 Verify User In Table
@@ -10,12 +11,13 @@ Verify User In Table
     ${row}=    Set Variable    1
     FOR    ${user}    IN    @{reversed_users}
         ${user_in_table}=    Get Text    ((${table})[${row}]//td)[2]
-        Should Be Equal    ${user_in_table}    ${user["name"]}
+        IF    "\\n" in """${user_in_table}"""
+            ${user_in_table}    Evaluate    """${user_in_table}""".replace("\\n", " ")[1:]
+        END
+        Should Be Equal As Strings   ${user_in_table}    ${user["name"]}
         ${row}=    Evaluate    ${row}+1
         Log To Console    Found user in table: ${user_in_table}
     END
-
-
 
 
 
