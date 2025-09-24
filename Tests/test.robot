@@ -3,6 +3,7 @@ Resource    ../Resources/App.resource
 Resource    ../Resources/Task1.resource
 Resource    ../Resources/Task2.resource
 Resource    ../Resources/Task3.resource
+Resource    ../Resources/Task4.resource
 Library     ../Library/CustomLibrary.py
 
 Suite Setup    Launch Browser
@@ -25,4 +26,6 @@ TC-00003 Modify User In Table
     [Documentation]    Modify user in table
     Modify User In Table
     
-*** Keywords ***
+TC-00004 Log Table Data
+    [Documentation]    Log table data
+    Log Table Data
