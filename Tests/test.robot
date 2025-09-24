@@ -27,5 +27,5 @@ TC-00003 Modify User In Table
     Modify User In Table
     
 TC-00004 Log Table Data
-    [Documentation]    Log table data
+    [Documentation]    Log table data of all users
     Log Table Data

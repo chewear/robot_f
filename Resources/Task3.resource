@@ -30,7 +30,7 @@ Clear And Fill Birthday
 Change User Information
     [Arguments]    ${user}
     Wait Until Element Is Visible    ${customer_txt_first_name}
-    # Clear and fill all form fields
+    
     Clear And Fill Input    ${customer_txt_first_name}    ${user["name"].split(" ")[0]}
     Clear And Fill Input    ${customer_txt_last_name}    ${user["name"].split(" ")[1]}
     Clear And Fill Input    ${customer_txt_email}    ${user["email"]}
@@ -42,7 +42,6 @@ Change User Information
     Clear And Fill Input    ${customer_txt_password}    ${user["password"]}
     Clear And Fill Input    ${customer_txt_confirm_password}    ${user["password"]}
     
-    # Submit and verify
     Click Button    ${customer_btn_submit}
     Wait Until Page Contains    Customer updated
     Log To Console    Customer updated: ${user["name"]}
