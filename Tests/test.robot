@@ -1,6 +1,7 @@
 *** Settings ***
 Resource    ../Resources/App.resource
 Resource    ../Resources/Task1.resource
+Resource    ../Resources/Task2.resource
 Library     ../Library/CustomLibrary.py
 
 Suite Setup    Launch Browser
@@ -13,5 +14,9 @@ TC-00001 Add First 5 Customers
     Go To Customers Page
     Add Customers
 
+TC-00002 Verify Table Display
+    [Documentation]    Verify table display
+    Go To Customers Page
+    Verify User In Table
     
 *** Keywords ***

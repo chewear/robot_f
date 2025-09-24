@@ -27,4 +27,8 @@ class CustomLibrary:
         month = parts[1]
         day = parts[2]
         return month + day + year
+        
+    def reverse_list(self, items):
+        return list(reversed(items))
+
 

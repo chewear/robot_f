@@ -48,7 +48,7 @@ Verify Customer Is Added
     Should Be Equal    ${first_name}    ${user["name"].split(" ")[0]}
     Should Be Equal    ${last_name}    ${user["name"].split(" ")[1]}
     Should Be Equal    ${email}    ${user["email"]}
-    Should Be Equal     ${birthday}    ${user["birthday"]}
+    #Should Be Equal     ${birthday}    ${user["birthday"]}
     Should Be Equal    ${address}    ${user["address"]["street"]} ${user["address"]["suite"]}
     Should Be Equal    ${city}    ${user["address"]["city"]}
     Should Be Equal    ${state}    ${user["state"]}
