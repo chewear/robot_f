@@ -1,6 +1,4 @@
 *** Settings ***
-Library    SeleniumLibrary
-Library    String
 Variables    ../Variables/customerpage.py
 
 *** Keywords ***

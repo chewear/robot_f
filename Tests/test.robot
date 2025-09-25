@@ -4,6 +4,7 @@ Resource    ../Resources/Task1.resource
 Resource    ../Resources/Task2.resource
 Resource    ../Resources/Task3.resource
 Resource    ../Resources/Task4.resource
+Resource    ../Resources/Task5.resource
 Library     ../Library/CustomLibrary.py
 
 Suite Setup    Launch Browser
@@ -29,3 +30,8 @@ TC-00003 Modify User In Table
 TC-00004 Log Table Data
     [Documentation]    Log table data of all users
     Log Table Data
+
+TC-00005 Analyze User Spending
+    [Documentation]   Analyze user spending
+    Analyze User Spending
+    
