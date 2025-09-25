@@ -1,7 +1,7 @@
 *** Settings ***
-    Variables    ../Variables/customerpage.py
-    Library     ../Library/CustomLibrary.py
-    Resource    ../Resources/Task1.resource
+Variables    ../Variables/customerpage.py
+Library     ../Library/CustomLibrary.py
+Resource    ../Resources/Task1.resource
 
 *** Keywords ***
 Modify User In Table

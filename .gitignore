@@ -12,3 +12,7 @@ __pycache__/
 .env.test
 .env.production
 Results/
+.venv
+*.pyc
+*.pyc
+__pycache__/
